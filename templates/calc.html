@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+
+    <h1>Calculator app</h1>
+
+    <form action="add" method="post">
+
+        {% csrf_token %}
+
+        <label>please enter ur number one</label>
+        <input type="text" name="num1">
+                <br>
+
+        <label>please enter ur number two</label>
+        <input type="text" name="num2">
+                <br>
+
+        <button type="submit">Add</button>
+    </form>
+
+    
+</body>
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'js/jquery.min.js' %}"></script>    
+<script src="{% static 'js/popper.min.js' %}"></script>
+</html>
